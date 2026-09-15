@@ -1,0 +1,564 @@
+/* Homepage v1 founder visual-review revision.
+   Kept separate from styles.css so this review slice stays easy to inspect/revert. */
+
+/* Header symbol mark */
+.brand {
+  align-items: center;
+}
+
+.brand-symbol {
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+}
+
+.brand-symbol svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.brand-name {
+  margin-left: -2px;
+}
+
+/* Hero: message first. Product proof is intentionally moved into the page body. */
+.hero::before {
+  display: none;
+}
+
+.hero {
+  padding-top: 82px;
+  padding-bottom: 88px;
+}
+
+.hero-grid {
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+.hero-copy {
+  max-width: 880px;
+  padding-right: 0;
+}
+
+.hero-copy h1 {
+  max-width: 860px;
+}
+
+.hero-description {
+  max-width: 720px;
+}
+
+/* Product proof now acts as the mid-page visual evidence section. */
+.proof-section {
+  background: #f8fafc;
+}
+
+.proof-copy > p {
+  max-width: 440px;
+}
+
+.proof-secondary-copy p {
+  max-width: 520px;
+}
+
+/* Beta inquiry: one local-only in-place flow for all inquiry entry points. */
+.inquiry-trigger {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.inquiry-dialog {
+  width: min(560px, calc(100% - 32px));
+  max-height: min(760px, calc(100vh - 32px));
+  padding: 0;
+  overflow: auto;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  border-radius: 16px;
+  box-shadow: 0 22px 60px rgba(16, 23, 34, 0.2);
+}
+
+.inquiry-dialog::backdrop {
+  background: rgba(16, 23, 34, 0.46);
+}
+
+.inquiry-dialog-inner {
+  position: relative;
+  padding: 34px;
+}
+
+.inquiry-dialog h2 {
+  margin: 12px 44px 0 0;
+  color: var(--text-strong);
+  font-size: 30px;
+  line-height: 1.3;
+  font-weight: 720;
+  letter-spacing: -0.035em;
+}
+
+.inquiry-description {
+  margin: 13px 0 24px;
+  color: var(--muted);
+  font-size: 13.5px;
+  line-height: 1.7;
+}
+
+.inquiry-close {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  color: #667181;
+  background: #f5f7fa;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font: inherit;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.inquiry-close:hover {
+  color: var(--text-strong);
+  border-color: var(--line-strong);
+}
+
+.inquiry-form {
+  display: grid;
+  gap: 9px;
+}
+
+.inquiry-form label {
+  margin-top: 7px;
+  color: #364151;
+  font-size: 12.5px;
+  font-weight: 650;
+}
+
+.inquiry-form input,
+.inquiry-form textarea {
+  width: 100%;
+  padding: 12px 13px;
+  color: var(--text);
+  background: #fff;
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  font: inherit;
+  font-size: 14px;
+  line-height: 1.5;
+  outline: none;
+}
+
+.inquiry-form textarea {
+  min-height: 104px;
+  resize: vertical;
+}
+
+.inquiry-form input:focus,
+.inquiry-form textarea:focus {
+  border-color: #8aa7ed;
+  box-shadow: 0 0 0 3px rgba(49, 95, 218, 0.1);
+}
+
+.inquiry-confirm {
+  width: 100%;
+  margin-top: 10px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.inquiry-status {
+  margin: 2px 0 0;
+  color: #788291;
+  font-size: 11.5px;
+  line-height: 1.6;
+}
+
+.inquiry-status:focus {
+  outline: 2px solid rgba(49, 95, 218, 0.28);
+  outline-offset: 3px;
+}
+
+@media (max-width: 880px) {
+  .hero {
+    padding-top: 68px;
+    padding-bottom: 76px;
+  }
+
+  .hero-copy {
+    max-width: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .brand {
+    gap: 9px;
+  }
+
+  .brand-symbol {
+    width: 25px;
+    height: 25px;
+    flex-basis: 25px;
+  }
+
+  .brand-name {
+    margin-left: 0;
+  }
+
+  .hero {
+    padding-top: 58px;
+    padding-bottom: 66px;
+  }
+
+  .inquiry-dialog {
+    width: min(100% - 20px, 560px);
+    max-height: calc(100vh - 20px);
+  }
+
+  .inquiry-dialog-inner {
+    padding: 27px 22px 24px;
+  }
+
+  .inquiry-dialog h2 {
+    font-size: 26px;
+  }
+
+  .inquiry-close {
+    top: 16px;
+    right: 16px;
+  }
+}
+
+/* Homepage v1 final — actual WIVIN product in Hero */
+.hero-grid {
+  grid-template-columns: minmax(0, 1.02fr) minmax(420px, 0.98fr);
+  gap: 56px;
+  align-items: center;
+}
+
+.hero-copy {
+  max-width: 620px;
+}
+
+.hero-product {
+  min-width: 0;
+}
+
+.hero-product-frame {
+  padding: 10px;
+  background: #ffffff;
+  border: 1px solid var(--line-strong);
+  border-radius: 16px;
+  box-shadow: 0 22px 48px rgba(16, 23, 34, 0.12);
+}
+
+.hero-product-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+@media (max-width: 880px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+
+  .hero-copy {
+    max-width: none;
+  }
+
+  .hero-product {
+    width: 100%;
+    max-width: 720px;
+  }
+}
+
+/* Hero final visual integration — make the real WIVIN window part of the composition */
+.hero {
+  overflow: hidden;
+}
+
+.hero-grid {
+  grid-template-columns: minmax(0, 0.92fr) minmax(500px, 1.08fr);
+  gap: 28px;
+  align-items: center;
+}
+
+.hero-copy {
+  max-width: 590px;
+}
+
+.hero-product {
+  min-width: 0;
+  width: 116%;
+  margin-right: -46px;
+  justify-self: end;
+}
+
+.hero-product-frame {
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.hero-product-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+@media (max-width: 880px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+
+  .hero-product {
+    width: 100%;
+    max-width: none;
+    margin-right: 0;
+    justify-self: stretch;
+  }
+}
+
+/* Header brand alignment — final cleanup */
+.brand {
+  align-items: baseline;
+  gap: 10px;
+}
+
+.brand-tagline {
+  padding-left: 0;
+  border-left: 0;
+  font-size: 12px;
+  line-height: 1;
+}
+
+.brand-name {
+  margin-left: -2px;
+  line-height: 1;
+}
+
+/* WIVIN header brand lockup — unified alignment */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.brand-symbol {
+  width: 26px;
+  height: 26px;
+  flex: 0 0 26px;
+}
+
+.brand-name {
+  margin-left: 0;
+  display: inline-flex;
+  align-items: center;
+  font-size: 23px;
+  line-height: 1;
+}
+
+.brand-tagline {
+  margin-left: 1px;
+  padding-left: 0;
+  border-left: 0;
+  display: inline-flex;
+  align-items: center;
+  font-size: 12px;
+  line-height: 1;
+  transform: translateY(1px);
+}
+
+/* Hero product alignment — match Windows Private Beta visual start */
+.hero-product {
+  width: 110%;
+  margin-right: -46px;
+  transform: translateY(48px);
+}
+
+@media (max-width: 880px) {
+  .hero-product {
+    width: 100%;
+    margin-right: 0;
+    transform: none;
+  }
+}
+
+/* Hero horizontal spacing — separate message and product */
+.hero-grid {
+  gap: 56px;
+}
+
+.hero-product {
+  margin-right: -68px;
+}
+
+/* Product Proof 01 — actual WIVIN main screen */
+.product-real-shot {
+  margin: 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.product-real-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Product Proof 02 — actual WIVIN chat window */
+.product-chat-shot {
+  min-height: 420px;
+  padding: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f4f7fb;
+}
+
+.product-chat-shot img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: 520px;
+  height: auto;
+}
+/* Product Proof — top alignment and wider column spacing */
+.proof-grid {
+  align-items: start;
+  gap: 96px;
+}
+/* Product Proof 02 — clean real-product layout */
+.proof-secondary-grid {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 96px;
+  align-items: start;
+}
+
+/* Remove old screenshot frame / label line */
+.product-frame-secondary {
+  overflow: visible;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.product-frame-secondary .product-frame-bar {
+  display: none;
+}
+
+/* Real chat screenshot only */
+.product-chat-shot {
+  min-height: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.product-chat-shot img {
+  display: block;
+  width: 100%;
+  max-width: none;
+  max-height: none;
+  height: auto;
+  border-radius: 16px;
+}
+
+/* Keep right copy aligned to the top */
+.proof-secondary-copy {
+  align-self: start;
+}
+/* Product Proof 02 — desktop baseline 1920x1080 / 100% */
+.proof-secondary-grid {
+  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+  gap: 120px;
+  align-items: start;
+}
+
+.product-frame-secondary {
+  width: 88%;
+  justify-self: start;
+}
+
+.proof-secondary-copy {
+  padding-top: 6px;
+}
+/* Product Proof 02 — align right copy edge with Proof 01 */
+.proof-secondary-copy {
+  width: 100%;
+  max-width: 520px;
+  justify-self: end;
+  padding-top: 58px;
+}
+
+.proof-secondary-copy p {
+  max-width: none;
+}
+/* Product Proof 02 — rebalance inside the fixed outer lines */
+.proof-secondary-grid {
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 88px;
+}
+
+.product-frame-secondary {
+  width: 94%;
+}
+
+.proof-secondary-copy {
+  width: 100%;
+  max-width: 600px;
+  justify-self: end;
+  padding-top: 58px;
+}
+/* Product Proof 02 — lower WORK CONTINUITY block */
+.proof-secondary-copy {
+  padding-top: 92px;
+}
+/* Product Proof 02 — final vertical rhythm */
+.proof-secondary-copy {
+  padding-top: 125px;
+}
+
+.proof-secondary-copy p {
+  margin-top: 24px;
+}
+/* Product Proof 02 — lower body copy only */
+.proof-secondary-copy p {
+  margin-top: 32px;
+}
+
+/* Product Proof 02 — align body copy bottom with chat image bottom */
+.proof-secondary-copy {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  padding-top: 125px;
+}
+
+.proof-secondary-copy p {
+  margin-top: 80px;
+  margin-bottom: 12px;
+}
