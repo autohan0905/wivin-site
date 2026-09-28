@@ -7,16 +7,14 @@
     name="description"
     content="AI works. Humans decide. WIVIN은 대화에서 시작된 업무를 사람의 승인 아래 실행하고, 결과와 맥락을 조직의 기억으로 연결하는 AI 업무 실행 환경입니다."
   />
-  <link rel="canonical" href="https://wivin.kr/ai-operations/" />
   <title>WIVIN — AI Operations</title>
 
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
   <link
     rel="stylesheet"
-    as="style"
-    crossorigin
     href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css"
   />
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -42,14 +40,14 @@
       </div>
 
       <nav class="main-nav" aria-label="AI Operations 페이지 메뉴">
-        <a href="#flow">구조</a>
-        <a href="#built">현재</a>
-        <a href="#next">확장</a>
+        <a href="#how">작동 방식</a>
+        <a href="#product">제품</a>
+        <a href="#built">현재와 확장</a>
       </nav>
     </div>
   </header>
 
-  <main id="top">
+  <main>
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
@@ -66,8 +64,10 @@
           </p>
 
           <p class="hero-description">
-            WIVIN은 팀의 대화를 AI가 이해하고, 중요한 행동은 사람의 결정 아래 실행하며,
-            완료된 결과와 맥락을 조직의 기억으로 남기는 AI 업무 실행 환경입니다.
+            WIVIN은 팀의 대화를 AI가 이해하고,<br />
+            중요한 행동은 사람의 결정 아래 실행하며,<br />
+            완료된 결과와 맥락을 조직의 기억으로 남기는<br />
+            AI 업무 실행 환경입니다.
           </p>
 
           <div class="hero-flow" aria-label="WIVIN AI 업무 실행 흐름">
@@ -91,143 +91,106 @@
             src="../assets/wivin-main.png"
             alt="실제 WIVIN Windows 제품 메인 화면"
           />
-          <figcaption>Actual WIVIN Windows product screen</figcaption>
         </figure>
       </div>
     </section>
 
-    <section class="principle-section">
-      <div class="container principle-grid">
-        <div>
-          <span class="section-kicker">HUMAN AUTHORITY</span>
-          <h2>
-            AI 자동화보다 먼저<br />
-            결정권의 위치를 설계합니다.
+    <section class="how-section" id="how">
+      <div class="container">
+        <div class="how-heading">
+          <span class="section-kicker">HOW WIVIN WORKS</span>
+          <h2 class="section-title">
+            AI가 실행을 돕고,<br />
+            결정권은 사람에게 남습니다.
           </h2>
         </div>
 
-        <div class="principle-copy">
-          <p>
-            WIVIN에서 AI는 대화를 이해하고 다음 행동을 연결합니다.
-            그러나 중요한 실행의 권한은 사람과 조직의 정책에 남습니다.
-          </p>
-          <p>
-            목표는 사람을 의사결정에서 제거하는 것이 아니라,
-            반복되는 확인과 실행의 마찰을 줄이는 것입니다.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="flow-section" id="flow">
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-kicker">ONE CONNECTED FLOW</span>
-          <h2>Conversation → Approval → Action → Memory</h2>
-          <p>
-            별도의 AI 화면에서 업무를 다시 입력하는 대신,
-            팀이 이미 하고 있는 대화에서 시작해 승인·실행·기억까지 이어지는 구조입니다.
-          </p>
-        </div>
-
-        <div class="flow-track">
-          <article class="flow-step">
-            <span class="flow-number">01</span>
+        <div class="how-track">
+          <article class="how-step">
+            <span class="step-number">01</span>
             <strong>Conversation</strong>
             <h3>대화가 업무의 출발점이 됩니다.</h3>
-            <p>
-              메시지와 파일이 오가는 기존 협업 흐름 안에서 필요한 업무 맥락을 이어갑니다.
-            </p>
           </article>
 
-          <article class="flow-step">
-            <span class="flow-number">02</span>
+          <article class="how-step">
+            <span class="step-number">02</span>
             <strong>Approval</strong>
             <h3>중요한 실행은 사람이 결정합니다.</h3>
-            <p>
-              실행 전에 권한과 승인 단계를 두어 AI의 제안과 사람의 결정을 분리합니다.
-            </p>
+            <p>권한과 정책을 확인하고 필요한 경우 사람의 승인을 거칩니다.</p>
           </article>
 
-          <article class="flow-step">
-            <span class="flow-number">03</span>
+          <article class="how-step">
+            <span class="step-number">03</span>
             <strong>Action</strong>
-            <h3>승인된 업무를 실행으로 연결합니다.</h3>
-            <p>
-              현재 제품에서는 Calendar Action 등 대화에서 실제 행동으로 이어지는 흐름을 검증하고 있습니다.
-            </p>
+            <h3>승인된 업무를 실제 실행으로 연결합니다.</h3>
           </article>
 
-          <article class="flow-step">
-            <span class="flow-number">04</span>
+          <article class="how-step">
+            <span class="step-number">04</span>
             <strong>Memory</strong>
-            <h3>결과와 맥락을 다시 찾을 수 있게 남깁니다.</h3>
-            <p>
-              업무가 끝난 뒤에도 중요한 맥락과 결과가 다음 업무의 출발점이 되도록 연결합니다.
-            </p>
+            <h3>결과와 맥락을 조직의 기억으로 남깁니다.</h3>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="product-section">
-      <div class="container product-intro">
+    <section class="product-section" id="product">
+      <div class="container product-heading">
         <div>
           <span class="section-kicker">REAL PRODUCT</span>
-          <h2>
-            개념 화면이 아니라<br />
-            실제 제품을 기준으로 설명합니다.
+          <h2 class="section-title">
+            설명보다<br />
+            실제 제품을 보여드립니다.
           </h2>
         </div>
-        <p>
-          이 페이지에는 현재 WIVIN Windows 제품의 실제 화면만 사용합니다.
-          홍보용으로 만든 가상 UI나 아직 존재하지 않는 기능 화면은 사용하지 않습니다.
+
+        <p class="product-copy">
+          WIVIN은 실제 Windows 애플리케이션으로 개발되고 있습니다.
+          이 페이지에는 현재 제품의 실제 화면만 사용합니다.
         </p>
       </div>
 
       <div class="container product-evidence">
-        <figure class="product-shot product-shot-main">
+        <figure class="product-shot">
           <img
             src="../assets/wivin-main.png"
             alt="WIVIN 실제 메인 화면"
           />
-          <figcaption>WIVIN main workspace · actual product screen</figcaption>
         </figure>
 
-        <figure class="product-shot product-shot-chat">
+        <figure class="product-shot">
           <img
             src="../assets/wivin-chat.png"
             alt="WIVIN 실제 채팅과 Action 화면"
           />
-          <figcaption>Conversation and Action · actual product screen</figcaption>
         </figure>
       </div>
     </section>
 
-    <section class="truth-section">
+    <section class="truth-section" id="built">
       <div class="container truth-header">
         <span class="section-kicker">PRODUCT TRUTH</span>
-        <h2>
+        <h2 class="section-title">
           지금의 WIVIN과<br />
           다음 단계의 확장을 구분합니다.
         </h2>
       </div>
 
       <div class="container truth-grid">
-        <section class="truth-column" id="built">
+        <div class="truth-column">
           <div class="truth-title">
             <span>Built today</span>
-            <strong>현재 제품에서 개발·검증 중인 기반</strong>
+            <strong>현재 제품 기반</strong>
           </div>
 
           <div class="truth-row">
             <h3>Conversation workspace</h3>
-            <p>팀의 대화와 파일이 같은 업무 맥락 안에서 이어지는 Windows 업무 메신저 기반.</p>
+            <p>팀 대화와 파일이 같은 업무 맥락 안에서 이어지는 Windows 업무 메신저 기반.</p>
           </div>
 
           <div class="truth-row">
-            <h3>My Space &amp; files</h3>
-            <p>개인 업무 자료와 파일을 다시 찾고 보관할 수 있는 개인 작업 공간과 파일 흐름.</p>
+            <h3>My Space &amp; Files</h3>
+            <p>개인 업무 자료와 파일을 보관하고 다시 찾을 수 있는 개인 작업 공간과 파일 흐름.</p>
           </div>
 
           <div class="truth-row">
@@ -239,22 +202,27 @@
             <h3>Memory foundation</h3>
             <p>중요한 맥락과 실행 결과를 다시 활용할 수 있도록 연결하는 Memory 기반.</p>
           </div>
-        </section>
 
-        <section class="truth-column truth-next" id="next">
+          <div class="truth-row">
+            <h3>Organization / permission foundation</h3>
+            <p>조직과 멤버의 역할·접근 범위를 구분하기 위한 권한 기반.</p>
+          </div>
+        </div>
+
+        <div class="truth-column">
           <div class="truth-title">
             <span>What this enables next</span>
             <strong>같은 승인·권한 구조 위의 확장 방향</strong>
           </div>
 
           <div class="truth-row">
-            <h3>구매요청</h3>
-            <p>대화에서 요청이 시작되고, 담당자의 확인과 승인 이후 후속 업무로 이어지는 흐름.</p>
+            <h3>구매 요청</h3>
+            <p>대화에서 요청이 시작되고, 확인과 승인 이후 후속 업무로 이어지는 방향.</p>
           </div>
 
           <div class="truth-row">
-            <h3>업무보고</h3>
-            <p>대화와 업무 맥락에서 필요한 보고 정보를 정리하고 조직의 확인 절차와 연결하는 방향.</p>
+            <h3>업무 보고</h3>
+            <p>대화와 업무 맥락을 필요한 보고 정보와 조직의 확인 절차로 연결하는 방향.</p>
           </div>
 
           <div class="truth-row">
@@ -262,19 +230,25 @@
             <p>기존 조직의 자료와 업무 맥락을 다음 구성원의 업무 시작점으로 연결하는 방향.</p>
           </div>
 
+          <div class="truth-row">
+            <h3>기타 반복 조직 업무</h3>
+            <p>같은 승인·권한·실행 구조를 반복적인 조직 업무로 확장하는 방향.</p>
+          </div>
+
           <p class="future-note">
-            위 항목은 현재 제공 기능을 의미하지 않습니다.
-            WIVIN의 기존 Conversation → Approval → Action → Memory 구조가 확장할 수 있는 제품 방향입니다.
+            오른쪽 항목은 현재 제공 기능이 아닙니다.
+            WIVIN의 기존 Conversation → Approval → Action → Memory 구조가
+            확장할 수 있는 제품 방향입니다.
           </p>
-        </section>
+        </div>
       </div>
     </section>
 
-    <section class="stage-section" id="stage">
+    <section class="stage-section">
       <div class="container stage-panel">
         <div>
           <span class="section-kicker section-kicker-light">CURRENT STAGE</span>
-          <h2>
+          <h2 class="section-title">
             Windows Private Beta를<br />
             준비하고 있습니다.
           </h2>
@@ -284,28 +258,6 @@
           <p>
             현재 WIVIN은 외부 배포 전에 제품 안정성, 보안 경계,
             핵심 승인 흐름, Action과 Memory의 연결을 검증하고 있습니다.
-          </p>
-          <p>
-            아직 검증되지 않은 기능이나 외부 사용 실적을 현재 성과처럼 표현하지 않습니다.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="closing-section">
-      <div class="container closing-grid">
-        <div>
-          <span class="section-kicker">WIVIN AI OPERATIONS</span>
-          <h2>
-            AI가 결정하는 업무가 아니라,<br />
-            사람이 결정하고 AI가 실행을 돕는 업무.
-          </h2>
-        </div>
-
-        <div class="closing-copy">
-          <p>
-            WIVIN이 만들고 있는 것은 더 많은 자동화 버튼이 아니라,
-            대화와 사람의 권한, 실제 실행, 조직의 기억이 끊기지 않는 업무 환경입니다.
           </p>
         </div>
       </div>
